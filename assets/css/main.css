@@ -230,8 +230,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 30px;
 }
 
+#intro .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #intro .img img {
-  width: 100%;
+  width: 90%;
 }
 
 #about {
