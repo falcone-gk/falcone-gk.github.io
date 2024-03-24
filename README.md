@@ -16,3 +16,4 @@ En el que se hicieron diversos cambios al template original para acoplarlo a mis
 ## TODO
 - El header se mantiene como 'active' solo la primera sección. Se debe ver la manera para que detecte cuando se hace scroll y actualizar la clase 'active' a la sección que le corresponde.
 - Agregar una mensajería para poder contactarme por correo.
+- Actualizar las redes sociales que tengo. Debido a que no uso de manera profesional las que están por defecto en el template no he actualizado los links.
