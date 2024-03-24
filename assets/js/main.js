@@ -4,7 +4,7 @@ selectElement.value = language;
 
 async function fetchJSONData(lang='en') {
 
-    var pathData = `lang/${lang}.json`;
+    var pathData = `assets/lang/${lang}.json`;
 
     return fetch(pathData)
         .then(response => response.json())
@@ -35,6 +35,12 @@ function setupPageLang(lang) {
             divCv.classList.remove('cv-hidden')
             divCv.classList.add('fade-in')
         }
+        // Update CV path based on language
+        const cvButtons = document.querySelectorAll('.download-cv');
+        cvButtons.forEach(cvButton => {
+            cvButton.href = `public/CV/CV - Enzo Falcón(${lang}).pdf`;
+        })
+
         localStorage.setItem('language', lang);
     })
     .catch(error => {
