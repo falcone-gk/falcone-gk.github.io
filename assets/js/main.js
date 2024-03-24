@@ -1,10 +1,10 @@
+const language = localStorage.getItem('language') || 'en';
+const selectElement = document.querySelector('.select-lang');
+selectElement.value = language;
+
 async function fetchJSONData(lang='en') {
 
-    if (lang === 'es') {
-        var pathData = "lang/es.json";
-    } else {
-        var pathData = "lang/en.json";
-    }
+    var pathData = `lang/${lang}.json`;
 
     return fetch(pathData)
         .then(response => response.json())
@@ -33,11 +33,13 @@ function setupPageLang(lang) {
         if (body.classList.contains('load-body') && divCv.classList.contains('cv-hidden')) {
             body.classList.remove('load-body')
             divCv.classList.remove('cv-hidden')
+            divCv.classList.add('fade-in')
         }
+        localStorage.setItem('language', lang);
     })
     .catch(error => {
         console.error('Error:', error);
     });
 }
 
-setupPageLang('en')
+setupPageLang(language)

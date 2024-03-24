@@ -14,15 +14,31 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   color: #6e6e6e;
+  background-color: #222222;
 }
 
 .load-body {
   min-height: 100vh;
-  background-color: #222222;
 }
 
 .cv-hidden {
   display: none;
+}
+
+.fade-in {
+  animation: showUpAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showUpAnimation {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
 }
 
 .fb2022-copy {
@@ -84,6 +100,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .white {
   color: white;
+}
+
+.bg-white {
+  background-color: white;
 }
 
 .navbar {
