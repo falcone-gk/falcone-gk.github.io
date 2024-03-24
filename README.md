@@ -12,6 +12,7 @@ En el que se hicieron diversos cambios al template original para acoplarlo a mis
 - **Contactar**: Se deshabilitó el formulario de contactar debido a que se implementará después.
 - **Lenguaje**: El template está en inglés por defecto y se le agregó un botón para poder cambiar el contenido entre español e inglés. Debido a esto se agregó una transición al primer renderizado de la página para que no se vea sin contenido al visitar al comienzo.
 - **Estructura**: Debido a la eliminación de imágenes se restructuró el layout de algunas de las secciones.
+- **Javascript**: Se agregó un archivo de javascript para el manejo del lenguaje de la página y actualizar la descarga del CV según el idioma elegido.
 
 ## TODO
 - El header se mantiene como 'active' solo la primera sección. Se debe ver la manera para que detecte cuando se hace scroll y actualizar la clase 'active' a la sección que le corresponde.
