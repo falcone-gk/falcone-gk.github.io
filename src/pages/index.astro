@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import CenterSection from "../components/layout/CenterSection.astro";
 import HomeHero from "../components/home/Hero.astro";
 import HomeAbout from "../components/home/About.astro";
+import Skills from "../components/home/Skills.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -15,8 +16,13 @@ import HomeAbout from "../components/home/About.astro";
   >
     <HomeHero />
   </section>
+
   <CenterSection id="about">
     <HomeAbout />
+  </CenterSection>
+
+  <CenterSection id="skills">
+    <Skills />
   </CenterSection>
 </Layout>
 

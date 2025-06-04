@@ -1,0 +1,78 @@
+---
+import Typography from "../Typography.astro";
+import Badge from "../ui/Badge.astro";
+
+const skills = {
+  backend: [
+    { name: "Python", icon: "simple-icons:python" },
+    { name: "Django", icon: "simple-icons:django" },
+    { name: "Postgresql", icon: "simple-icons:postgresql" },
+    { name: "Redis", icon: "simple-icons:redis" }, // TODO: Add redis icon
+  ],
+  frontend: [
+    { name: "Vue 3", icon: "simple-icons:vuedotjs" },
+    { name: "Nuxt 3", icon: "simple-icons:nuxtdotjs" },
+    { name: "Tailwind", icon: "simple-icons:nuxtdotjs" },
+    { name: "HTML", icon: "simple-icons:html5" },
+    { name: "JavaScript", icon: "simple-icons:javascript" },
+    { name: "CSS", icon: "simple-icons:css3" },
+    { name: "Typescript", icon: "simple-icons:typescript" },
+  ],
+  extra: [
+    { name: "Docker", icon: "simple-icons:docker" },
+    { name: "Linux", icon: "simple-icons:linux" },
+    { name: "Git", icon: "simple-icons:git" },
+    { name: "Nginx", icon: "simple-icons:nginx" },
+  ],
+};
+---
+
+<div class="text-center flex flex-col gap-24">
+  <Typography as="h2" variant="big" color="neutral"> Skills </Typography>
+
+  <div class="mx-auto space-y-12">
+    <Typography as="p" variant="body" color="neutral">
+      I have experience with the following technologies and tools:
+    </Typography>
+    <div class="space-y-10">
+      <div>
+        <Typography class="mb-4" as="h3" variant="h3" color="neutral">
+          Backend Developer
+        </Typography>
+        <div class="flex justify-center gap-3 flex-wrap">
+          {
+            skills.backend.map((skill) => (
+              <Badge icon={skill.icon} label={skill.name} />
+            ))
+          }
+        </div>
+      </div>
+
+      <div>
+        <Typography class="mb-4" as="h3" variant="h3" color="neutral">
+          Frontend Developer
+        </Typography>
+        <div class="flex justify-center gap-3 flex-wrap">
+          {
+            skills.frontend.map((skill) => (
+              <Badge icon={skill.icon} label={skill.name} />
+            ))
+          }
+        </div>
+      </div>
+
+      <div>
+        <Typography class="mb-4" as="h3" variant="h3" color="neutral">
+          Extra skills
+        </Typography>
+        <div class="flex justify-center gap-3 flex-wrap">
+          {
+            skills.extra.map((skill) => (
+              <Badge icon={skill.icon} label={skill.name} />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
