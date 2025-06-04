@@ -1,0 +1,36 @@
+---
+import { Icon } from "astro-icon/components";
+import Typography from "../Typography.astro";
+---
+
+<div class="flex flex-col gap-20 max-w-4xl mx-auto">
+  <div>
+    <Typography as="h2" variant="big" color="neutral"> About </Typography>
+  </div>
+
+  <div class="flex items-start gap-12">
+    <div class="hidden md:block">
+      <Icon
+        name="heroicons:code-bracket-solid"
+        class="bg-primary-600 dark:bg-primary-400 h-16 w-16"
+      />
+    </div>
+    <div>
+      <Typography as="p" variant="body" color="neutral">
+        I studied Economics; however, during my last semester at university, I
+        discovered the world of software development with
+        <span class="font-bold text-primary-600 dark:text-primary-400"
+          >Python</span
+        >. This inspired me to learn more about programming, specifically in the
+        field of Economics. Later, I decided to create a website for my
+        brother's business, which is how I started learning
+        <span class="font-bold text-primary-600 dark:text-primary-400"
+          >Web Development</span
+        > with
+        <span class="font-bold text-primary-600 dark:text-primary-400"
+          >Django</span
+        >.
+      </Typography>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Safelist para colores base */
+@source inline("{dark:,hover:,}bg-{primary,slate,gray,neutral,red,cyan}-{50,{100..900..100},950}");
+@source inline("{dark:,focus:,}ring-{primary,slate,gray,neutral,red,cyan}-{50,{100..900..100},950}");
+
+@theme {
+  --color-primary: #33d17a;
+  --color-primary-50: #f1fcf5;
+  --color-primary-100: #defaea;
+  --color-primary-200: #bef4d5;
+  --color-primary-300: #8beab6;
+  --color-primary-400: #52d68d;
+  --color-primary-500: #33d17a;
+  --color-primary-600: #1d9c56;
+  --color-primary-700: #1b7a46;
+  --color-primary-800: #1a613b;
+  --color-primary-900: #175033;
+  --color-primary-950: #072c19;
+}
+
+:root {
+  --ui-container: var(--container-7xl);
+
+  --header-height: 60px;
+}
+
+html {
+  background-color: #f6f5ef;
+}
+
+html.dark {
+  background-color: #222831;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}

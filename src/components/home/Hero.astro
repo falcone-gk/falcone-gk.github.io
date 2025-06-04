@@ -1,0 +1,45 @@
+---
+import Typography from "../Typography.astro";
+import Button from "../ui/Button.astro";
+---
+
+<div class="flex flex-col-reverse gap-12 items-center md:flex-row">
+  <div>
+    <div>
+      <Typography
+        class="lg:leading-28 font-bold"
+        as="h1"
+        variant="bigger"
+        color="neutral"
+      >
+        Hi! <br /> I am <span class="text-primary-500 dark:text-primary-400"
+          >Enzo</span
+        > and I am a
+        <span class="text-primary-500 dark:text-primary-400">Web Developer</span
+        >
+      </Typography>
+    </div>
+    <div class="space-y-12 mt-4">
+      <Typography as="p" variant="h2" color="neutral">
+        Full Stack Web Developer with a strong commitment to my work, achieving
+        high quality projects.
+      </Typography>
+      <div class="flex gap-8 items-center flex-wrap">
+        <Button color="primary" icon="heroicons:document-text-solid"
+          >Download CV</Button
+        >
+        <Button color="cyan" icon="simple-icons:linkedin">Contact</Button>
+        <Button color="slate" icon="simple-icons:github">Github</Button>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[300px] md:min-w-[350px]">
+    <img class="profile" src="/images/profile.webp" alt="profile" />
+  </div>
+</div>
+
+<style>
+  .profile {
+    mask-image: linear-gradient(#000 80%, transparent);
+  }
+</style>

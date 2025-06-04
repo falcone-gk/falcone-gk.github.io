@@ -1,0 +1,10 @@
+---
+const { id } = Astro.props;
+---
+
+<section
+  id={id}
+  class="flex flex-col justify-center min-h-screen mt-12 md:mt-0"
+>
+  <slot />
+</section>

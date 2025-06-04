@@ -1,0 +1,119 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { Icon } from "astro-icon/components";
+
+type ValidColor =
+  | "primary"
+  | "slate"
+  | "gray"
+  | "zinc"
+  | "neutral"
+  | "stone"
+  | "red"
+  | "orange"
+  | "amber"
+  | "yellow"
+  | "lime"
+  | "green"
+  | "emerald"
+  | "teal"
+  | "cyan"
+  | "sky"
+  | "blue"
+  | "indigo"
+  | "violet"
+  | "purple"
+  | "fuchsia"
+  | "pink"
+  | "rose";
+
+export interface Props extends HTMLAttributes<"button"> {
+  size?: "sm" | "md" | "lg";
+  color?: ValidColor;
+  variant?: "solid" | "outline" | "ghost";
+  disabled?: boolean;
+  type?: "button" | "submit" | "reset";
+  icon?: string;
+  iconPosition?: "left" | "right";
+  iconSize?: number | string;
+}
+
+const {
+  size = "md",
+  color = "primary",
+  variant = "solid",
+  disabled = false,
+  type = "button",
+  icon,
+  iconPosition = "left",
+  iconSize = "1em",
+  ...attrs
+} = Astro.props;
+
+const colorShade = "600";
+const hoverColorShade = "700";
+const bgColorShade = "50";
+const darkColorShade = "500";
+const darkHoverColorShade = "600";
+const darkBgColorShade = "900";
+
+const iconClasses = {
+  sm: "w-3 h-3",
+  md: "w-4 h-4",
+  lg: "w-5 h-5",
+};
+---
+
+<button
+  type={type}
+  disabled={disabled}
+  class={`
+    inline-flex items-center justify-center gap-2
+    font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2
+    focus:ring-${color}-500 dark:focus:ring-${color}-400
+    ${size === "sm" ? "px-3 py-1 text-sm" : ""}
+    ${size === "md" ? "px-4 py-2 text-base" : ""}
+    ${size === "lg" ? "px-6 py-3 text-lg" : ""}
+    ${
+      variant === "solid"
+        ? `bg-${color}-${colorShade} text-white hover:bg-${color}-${hoverColorShade} dark:bg-${color}-${darkColorShade} dark:text-neutral-50 dark:hover:bg-${color}-${darkHoverColorShade}`
+        : ""
+    }
+    ${
+      variant === "outline"
+        ? `border border-${color}-${colorShade} text-${color}-${colorShade} hover:bg-${color}-${bgColorShade} dark:border-${color}-${darkColorShade} dark:text-${color}-${darkColorShade} dark:hover:bg-${color}-${darkBgColorShade}`
+        : ""
+    }
+    ${
+      variant === "ghost"
+        ? `text-${color}-${colorShade} hover:bg-${color}-${bgColorShade} dark:text-${color}-${darkColorShade} dark:hover:bg-${color}-${darkBgColorShade}`
+        : ""
+    }
+    ${disabled ? "opacity-50 cursor-not-allowed" : ""}
+  `
+    .replace(/\s+/g, " ")
+    .trim()}
+  {...attrs}
+>
+  {
+    icon && iconPosition === "left" && (
+      <Icon
+        name={icon}
+        class={`${iconClasses[size]} flex-shrink-0`}
+        width={iconSize}
+        height={iconSize}
+      />
+    )
+  }
+  <slot />
+  {
+    icon && iconPosition === "right" && (
+      <Icon
+        name={icon}
+        class={`${iconClasses[size]} flex-shrink-0`}
+        height={iconSize}
+        width={iconSize}
+      />
+    )
+  }
+</button>
