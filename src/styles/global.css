@@ -19,6 +19,9 @@
   --color-primary-800: #1a613b;
   --color-primary-900: #175033;
   --color-primary-950: #072c19;
+
+  --color-darkbg: #222831;
+  --color-lightbg: #f6f5ef;
 }
 
 :root {
@@ -28,11 +31,11 @@
 }
 
 html {
-  background-color: #f6f5ef;
+  background-color: var(--color-lightbg);
 }
 
 html.dark {
-  background-color: #222831;
+  background-color: var(--color-darkbg);
   color: #fff;
 }
 
