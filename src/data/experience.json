@@ -1,5 +1,22 @@
 [
   {
+    "title": "Hospedaje Picaflor Web Platform - Fullstack Developer",
+    "description": "Built a complete lodging platform where users can browse rooms, make reservations, and complete payments through an integrated payment gateway. Developed a responsive landing page, a hotel shop for guests, and a chatbot for support. Designed and implemented the admin panel with Django for managing reservations, room media, availability, and reports. Optimized image handling with automatic resizing and compression. Deployed services using Docker and Linux.",
+    "date": "Jan 2025 - Apr 2025",
+    "tools": [
+      { "name": "Python", "icon": "simple-icons:python" },
+      { "name": "Django", "icon": "simple-icons:django" },
+      { "name": "Postgresql", "icon": "simple-icons:postgresql" },
+      { "name": "Docker", "icon": "simple-icons:docker" },
+      { "name": "Linux", "icon": "simple-icons:linux" },
+      { "name": "Typescript", "icon": "simple-icons:typescript" },
+      { "name": "Tailwind CSS", "icon": "simple-icons:tailwindcss" },
+      { "name": "Vue 3", "icon": "simple-icons:vuedotjs" },
+      { "name": "Git", "icon": "simple-icons:git" },
+      { "name": "Nginx", "icon": "simple-icons:nginx" }
+    ]
+  },
+  {
     "title": "Securitec - Backend Python Developer",
     "description": "Worked through Scrum methodology. Fixed bugs and developed functionalities for Scorecloud such as reports, dashboards, and microservices. Developed multimedia chatbots for various platforms. Used Celery and Redis for queuing report downloads, and updated PostgreSQL queries.",
     "date": "Apr 2023 - Sep 2023",

@@ -1,0 +1,67 @@
+---
+import Card from "../ui/Card.astro";
+import Button from "../ui/Button.astro";
+import Typography from "../Typography.astro";
+import Grid from "../layout/Grid.astro";
+import projects from "../../data/projects.json";
+---
+
+<div>
+  <div class="text-center mb-16">
+    <Typography as="h2" variant="big" color="neutral" class="font-bold">
+      Projects
+    </Typography>
+  </div>
+
+  <div>
+    <Grid>
+      {
+        projects.map((project) => (
+          <Card>
+            <div
+              slot="header"
+              class="flex justify-center items-center h-48 w-full overflow-hidden"
+            >
+              <img
+                src={project.imageUrl}
+                alt={project.title}
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+
+            <div>
+              <Typography
+                as="h3"
+                variant="h3"
+                color="neutral"
+                class="font-bold"
+              >
+                {project.title}
+              </Typography>
+
+              <Typography as="p" variant="medium" color="neutral">
+                {project.description}
+              </Typography>
+            </div>
+
+            <div slot="footer" class="flex items-center gap-4">
+              <Button>
+                <a href={project.visitUrl} target="_blank">
+                  Visit
+                </a>
+              </Button>
+
+              {project.githubUrl && (
+                <Button color="slate" icon="simple-icons:github">
+                  <a href={project.githubUrl} target="_blank">
+                    Repository
+                  </a>
+                </Button>
+              )}
+            </div>
+          </Card>
+        ))
+      }
+    </Grid>
+  </div>
+</div>

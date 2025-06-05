@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Hospedaje Picaflor",
+    "description": "Complete hotel management platform with booking system, virtual store for guests, and admin.",
+    "imageUrl": "/images/projects/hospedaje-picaflor.webp",
+    "visitUrl": "https://hospedajepicaflor.com/"
+  },
+  {
+    "title": "Edukar Website",
+    "description": "Created a responsive landing page with a forum for students participation in solving math problems.",
+    "imageUrl": "/images/projects/edukar.webp",
+    "visitUrl": "https://aedukar.com/"
+  },
+  {
+    "title": "Demo Tenant Admin",
+    "description": "Web application that allows you to manage the costs, services and rent of tenants of a house",
+    "imageUrl": "/images/projects/tenant-admin.webp",
+    "visitUrl": "https://tenant-admin.vercel.app/login",
+    "githubUrl": "https://github.com/falcone-gk/tenant-admin"
+  }
+]

@@ -20,22 +20,33 @@
   --color-primary-900: #175033;
   --color-primary-950: #072c19;
 
-  --color-darkbg: #222831;
-  --color-lightbg: #f6f5ef;
+  --color-light-bg: #f6f5ef;
+  --color-dark-bg: #222831;
 }
 
-:root {
-  --ui-container: var(--container-7xl);
+@layer base {
+  :root {
+    --ui-container: var(--container-7xl);
+    --header-height: 60px;
 
-  --header-height: 60px;
+    --accent-color: #f0efe4;
+    --ui-background: var(--color-light-bg);
+    --ui-border: #e0dfd4;
+
+    @variant dark {
+      --accent-color: #323c48;
+      --ui-background: var(--color-dark-bg);
+      --ui-border: #3d4755;
+    }
+  }
 }
 
 html {
-  background-color: var(--color-lightbg);
+  background-color: var(--color-light-bg);
 }
 
 html.dark {
-  background-color: var(--color-darkbg);
+  background-color: var(--color-dark-bg);
   color: #fff;
 }
 
