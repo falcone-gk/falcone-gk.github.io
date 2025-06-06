@@ -13,5 +13,4 @@ export default defineConfig({
 
   integrations: [icon()],
   site: "https://falcone-gk.github.io",
-  base: "/portfolio-astro",
 });
